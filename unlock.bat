@@ -5,7 +5,7 @@ set /p FirehoseFile=Enter the full path of your (prog_emmc_firehose_****.mbn) fi
 set emmcdl=%~dp0emmcdl.exe
 
 echo Flashing devinfo....
-"%emmcdl%" -p %port% -f %FirehoseFile% -b devinfo devinfo.img
+"%emmcdl%" -p %port% -f %FirehoseFile% -b abl abl.img
 echo Process Completed. Bootloader Unlocked.
 echo Long press power button & volume down!
 pause
