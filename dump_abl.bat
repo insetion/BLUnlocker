@@ -1,5 +1,5 @@
 @echo off
-echo "Script to dump devinfo from Android Devices with Qualcomm Chipsets"
+echo "Script to dump abl from Android Devices with Qualcomm Chipsets"
 echo "				Dev : Naveen_SIngh/Tony					"
 
 echo "Press volume up, down buttons together & then connect USB"
@@ -9,7 +9,7 @@ set /p FirehoseFile=Enter the full path of your (prog_emmc_firehose_****.mbn) fi
 set emmcdl=%~dp0emmcdl.exe
 
 echo Dumping devinfo....
-"%emmcdl%" -p %port% -f %FirehoseFile% -d devinfo -o devinfo.img
+"%emmcdl%" -p %port% -f %FirehoseFile% -d abl -o abl.img
 
 echo "Done! devinfo is saved as devinfo.img in the current directory"
 echo "Use HxD Hex Editor to edit it."
